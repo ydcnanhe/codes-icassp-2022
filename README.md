@@ -13,3 +13,6 @@ He, Yudong, He Wang, Qifeng Chen, and Richard HY So. "Harvesting Partially-Disjo
 
 # Remark
 More separation results and separation time can be found on this page: https://ydcnanhe.github.io/demo-icassp2022/
+
+# Contact
+Yudong He, email: yhebh@connect.ust.hk
