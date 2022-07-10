@@ -1,7 +1,7 @@
 # Contribution
 1. This repository stores Matlab code of our proposed blind source separation (BSS) algorithm that is fast and performs better than some state-of-the-art BSS algorithms. The proposed algorithm can separate any number of speech sources using two microphones.
 
-2. This repository stores Matlab codes of all BSS algorithms we used as a comparison in our ICASSP 2022 paper "HARVESTING PARTIALLY-DISJOINT TIME-FREQUENCY INFORMATION FOR IMPROVING DEGENERATE UNMIXING ESTIMATION TECHNIQUE".
+2. This repository also stores Matlab codes of all BSS algorithms we used as a comparison in our ICASSP 2022 paper "HARVESTING PARTIALLY-DISJOINT TIME-FREQUENCY INFORMATION FOR IMPROVING DEGENERATE UNMIXING ESTIMATION TECHNIQUE".
 
 These BSS algorithms including
 1. Degenerate unmixing estimation technique (DUET) (Rickard, 2007).
