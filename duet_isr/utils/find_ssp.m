@@ -1,7 +1,11 @@
 function [ssp_masks,rho] = find_ssp(X,nsrc,fs,mu,tfweight_threshold,isPlot_hist)
-
-% FIND_SSP Obtain single-source-points (SSP) masks and closeness measure 
+%
+% Description:
+%
+% find_ssp: Obtain single-source-points (SSP) masks and closeness measure 
 % based on DUET.
+%
+% Syntax:
 %
 % [ssp_masks,rho] = find_ssp(X,nsrc)
 % [ssp_masks,rho] = find_ssp(X,nsrc,fs)
@@ -10,21 +14,30 @@ function [ssp_masks,rho] = find_ssp(X,nsrc,fs,mu,tfweight_threshold,isPlot_hist)
 % [ssp_masks,rho] = find_ssp(X,nsrc,fs,mu,tf_threshold,isPlot_hist)
 %
 % Inputs:
-% X: nbin x nfram x 2 matrix containing STFT coefficients for nchan 
-% mixture signals with nbin frequency bins and nfram time frames.
-% nsrc: the number of sources.
-% fs: sampling freuqency (default: 16000Hz).
-% mu: the closeness threshold to determine a SSP (default: 0.05).
-% tfweight_threshold: time-freuqency weight threshold to determine a noisy 
+%
+% X - nbin x nfram x 2 tensor containing STFT coefficients for two channels
+% of mixture signals with nbin frequency bins and nfram time frames.
+%
+% nsrc - the number of sources.
+%
+% fs - sampling freuqency (default: 16000Hz).
+%
+% mu - the closeness threshold to determine an SSP (default: 0.05).
+%
+% tfweight_threshold - time-freuqency weight threshold to determine a noisy 
 % tf bin (default: 5e-3).
-% isPlot_hist: true/false, whether to plot the delay-attenuation histogram
-% default(false).
+%
+% isPlot_hist - true/false, whether to plot the delay-attenuation histogram
+% (default: false).
 %
 % Output:
-% ssp_masks: nbin x nfram x nsrc matrix containing 0/1 for labeling SSP of
+%
+% ssp_masks - nbin x nfram x nsrc tensor containing 0/1 matrices for labeling SSP of
 % nsrc sources.
-% rho: nbin x nfram x nsrc matrix containing closeness measure of nsrc
-% sources.
+%
+% rho - nbin x nfram x nsrc tensor containing closeness measure between
+% local (tf point-wise) mixing parameters and global mixing parameters of 
+% nsrc sources.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Copyright 2022 Yudong He
@@ -33,9 +46,14 @@ function [ssp_masks,rho] = find_ssp(X,nsrc,fs,mu,tfweight_threshold,isPlot_hist)
 %
 % If you use this code, please cite this paper
 %
-% Yudong He, He Wang, Qifeng Chen, and Richard H.Y. So
-% "HARVESTING PARTIALLY-DISJOINT TIME-FREQUENCY INFORMATION FOR IMPROVING DEGENERATE UNMIXING ESTIMATION TECHNIQUE,"
-% in ICASSP 2022 - 2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), in press. 
+% @inproceedings{he2022harvesting,
+%   title={Harvesting Partially-Disjoint Time-Frequency Information for Improving Degenerate Unmixing Estimation Technique},
+%   author={He, Yudong and Wang, He and Chen, Qifeng and So, Richard HY},
+%   booktitle={ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+%   pages={506--510},
+%   year={2022},
+%   organization={IEEE}
+% }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
