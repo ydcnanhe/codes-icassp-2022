@@ -1,5 +1,5 @@
-# Blind source separation MATLAB codes
-This repository stores MATLAB codes of some analytical/classical blind source separation (BSS) algorithms we used in our icassp2022 paper "HARVESTING PARTIALLY-DISJOINT TIME-FREQUENCY INFORMATION FOR IMPROVING DEGENERATE UNMIXING ESTIMATION TECHNIQUE".
+# Blind source separation Matlab codes
+This repository stores Matlab codes of some analytical/classical blind source separation (BSS) algorithms we used in our icassp2022 paper "HARVESTING PARTIALLY-DISJOINT TIME-FREQUENCY INFORMATION FOR IMPROVING DEGENERATE UNMIXING ESTIMATION TECHNIQUE".
 
 These BSS algorithms including
 1. Degenerate unmixing estimation technique (DUET) (Rickard, 2007).
