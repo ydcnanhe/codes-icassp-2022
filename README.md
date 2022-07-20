@@ -5,7 +5,7 @@
 
 These BSS algorithms including
 1. Degenerate unmixing estimation technique (DUET) (Rickard, 2007), a time-frequency masking-based method.
-2. Independent vector analysis (IVA) (Kim et al., 2006), independent component analysis (ICA based method.
+2. Independent vector analysis (IVA) (Kim et al., 2006), independent component analysis (ICA) based method.
 3. Independent low-rank matrix analysis (ILRMA) (Kitamura et al., 2016), a method combining ICA and non-negative matrix factorazation (NMF).
 4. Multi-channel non-nagetive factorization (MULTI_NMF) (Ozerov et al., 2010), NMF-based method.
 4. Full-rank spatial model (FULLRANK) (Duong et al., 2010).
